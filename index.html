@@ -1,158 +1,209 @@
 HTML
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saurabh Singh Kushwaha | Portfolio</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+ font-family:Arial,sans-serif;
+ color:white;
+ background:linear-gradient(135deg,#160c35,#25105b,#071e45,#3b1458);
+ background-attachment:fixed;
 }
 
-html {
-  scroll-behavior: smooth;
+header{
+ text-align:center;
+ padding:35px 12px;
+ background:linear-gradient(120deg,#40105f,#152c70,#153d75);
+ border-bottom:2px solid #66ddff;
+ box-shadow:0 0 25px #9c52ff66;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: white;
-  background: linear-gradient(135deg, #080d1c, #142746, #080d1c);
+header h1{
+ color:#ffe477;
+ font-size:clamp(23px,5vw,34px);
+ text-shadow:0 0 15px #ffbd48;
 }
 
-header {
-  text-align: center;
-  padding: 30px 15px;
-  background: #101b38;
-  border-bottom: 2px solid gold;
+header p{margin-top:12px;color:#e5d9ff}
+
+nav{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:18px;
+ padding:18px 10px;
+ background:#160f35;
+ position:sticky;
+ top:0;
+ z-index:10;
 }
 
-header h1 {
-  color: gold;
-  font-size: 30px;
+nav a{
+ color:white;
+ text-decoration:none;
+ font-weight:bold;
+}
+nav a:hover{color:#63eaff}
+
+.hero{
+ text-align:center;
+ padding:65px 15px;
 }
 
-header p {
-  margin-top: 10px;
-  color: #ddd;
+.hero h2{
+ color:#75eaff;
+ font-size:32px;
+ text-shadow:0 0 15px #328aff;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-  padding: 18px 10px;
-  background: #111a2c;
+.hero p{margin-top:18px;line-height:1.9;color:#eee}
+
+.section-title{
+ color:#8eeaff;
+ text-align:center;
+ margin:35px 0 20px;
+ text-shadow:0 0 12px #568cff;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+.gallery{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:22px;
+ padding:20px;
 }
 
-nav a:hover {
-  color: gold;
+.frame{
+ width:165px;
+ padding:8px;
+ border:3px solid transparent;
+ border-radius:18px;
+ background:
+ linear-gradient(#201342,#201342) padding-box,
+ linear-gradient(135deg,#ffcf65,#bd65ff,#53eaff,#ffcf65) border-box;
+ box-shadow:0 0 18px #9b65ff88;
+ transition:.3s;
 }
 
-.hero {
-  text-align: center;
-  padding: 55px 15px;
+.frame:hover{
+ transform:translateY(-8px) scale(1.03);
+ box-shadow:0 0 28px #67dcff;
 }
 
-.hero h2 {
-  font-size: 32px;
-  color: gold;
+.frame img{
+ width:100%;
+ height:185px;
+ object-fit:cover;
+ border-radius:11px;
 }
 
-.hero p {
-  margin-top: 15px;
-  color: #ddd;
-  line-height: 1.7;
+.card{
+ margin:20px;
+ padding:25px 18px;
+ text-align:center;
+ background:linear-gradient(135deg,#211345,#132b56);
+ border:1px solid #9c74ff;
+ border-radius:20px;
+ box-shadow:0 0 20px #7848c955;
 }
 
-.section-title {
-  color: gold;
-  text-align: center;
-  margin: 35px 0 20px;
+.card p{color:#eee;line-height:1.9}
+
+.skills{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:center;
+ gap:13px;
+ padding:15px;
 }
 
-.gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+.skill{
+ padding:14px 18px;
+ color:white;
+ border:1px solid #69dcff;
+ border-radius:25px;
+ background:linear-gradient(120deg,#492477,#153b76);
+ cursor:pointer;
+ font-size:14px;
+ font-weight:bold;
+ box-shadow:0 0 10px #568aff55;
+ transition:.3s;
 }
 
-.frame {
-  width: 150px;
-  padding: 8px;
-  border: 3px solid gold;
-  border-radius: 16px;
-  background: #1c3151;
-  box-shadow: 0 0 18px #d4af3760;
-  transition: 0.3s;
+.skill:hover{
+ background:linear-gradient(120deg,#813cbb,#176eaa);
+ transform:translateY(-4px);
+ box-shadow:0 0 18px #69dcff;
 }
 
-.frame:hover {
-  transform: translateY(-7px);
+.lesson{
+ display:none;
+ margin:20px;
+ padding:23px 17px;
+ border-radius:18px;
+ border:1px solid #68dfff;
+ background:linear-gradient(135deg,#19123d,#102e57);
+ box-shadow:0 0 20px #7251d755;
+ scroll-margin-top:85px;
 }
 
-.frame img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 10px;
+.lesson.active{display:block}
+
+.lesson h2{
+ color:#80eaff;
+ text-align:center;
+ margin-bottom:18px;
 }
 
-.card {
-  margin: 18px;
-  padding: 25px 18px;
-  text-align: center;
-  background: #121d33;
-  border: 1px solid #b99a39;
-  border-radius: 18px;
-  box-shadow: 0 5px 20px #0005;
+.lesson h3{color:#ffdc81;margin:20px 0 10px}
+
+.lesson p,.lesson li{
+ color:#eee;
+ line-height:1.8;
+ margin:8px 0;
 }
 
-.card p {
-  color: #ddd;
-  line-height: 1.8;
+.lesson ul{padding-left:22px}
+
+.lesson a{
+ display:inline-block;
+ margin:7px 3px;
+ padding:11px 15px;
+ color:white;
+ text-decoration:none;
+ border-radius:10px;
+ background:linear-gradient(120deg,#7d36c1,#1764a9);
+ border:1px solid #73dfff;
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 15px;
+.lesson a:hover{background:#a34bd0}
+
+.close-btn{
+ display:block;
+ margin:20px auto 0;
+ padding:10px 20px;
+ color:white;
+ background:#783cae;
+ border:1px solid #8beaff;
+ border-radius:20px;
+ cursor:pointer;
 }
 
-.skill {
-  padding: 13px 17px;
-  color: gold;
-  border: 1px solid gold;
-  border-radius: 25px;
-  background: #1b2b49;
-  transition: 0.3s;
-}
-
-.skill:hover {
-  background: #344b70;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #101b38;
-  border-top: 1px solid gold;
-  color: #ddd;
-  line-height: 1.8;
+footer{
+ text-align:center;
+ padding:28px 12px;
+ background:linear-gradient(120deg,#35134e,#102c63);
+ border-top:2px solid #72dcff;
+ line-height:1.9;
 }
 
 </style>
@@ -161,94 +212,246 @@ footer {
 <body>
 
 <header>
-  <h1>SAURABH SINGH KUSHWAHA</h1>
-  <p>Welcome To My Personal Website</p>
+ <h1>SAURABH SINGH KUSHWAHA</h1>
+ <p>Welcome To My Personal Website</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#gallery">Photos</a>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#interests">Interests</a>
+ <a href="#home">Home</a>
+ <a href="#gallery">Photos</a>
+ <a href="#about">About</a>
+ <a href="#skills">Skills</a>
+ <a href="#interests">Interests</a>
 </nav>
 
 <section class="hero" id="home">
-  <h2>Hello, I'm Saurabh</h2>
-  <p>
-    Dream Big | Work Hard | Stay Focused<br>
-    Learning Today, Leading Tomorrow.
-  </p>
+ <h2>Hello, I'm Saurabh</h2>
+ <p>
+ Dream Big | Work Hard | Stay Focused<br>
+ Learning Today, Leading Tomorrow.
+ </p>
 </section>
 
 <h2 class="section-title" id="gallery">
-  ✨ MY PHOTO GALLERY ✨
+ ✨ MY PHOTO GALLERY ✨
 </h2>
 
 <div class="gallery">
+ <div class="frame">
+  <img src="IMG_20261102_123719.jpg" alt="Saurabh Photo 1">
+ </div>
 
-  <div class="frame">
-    <img src="IMG_20261102_123719.jpg" alt="Saurabh Photo 1">
-  </div>
+ <div class="frame">
+  <img src="IMG_20261103_114203.jpg" alt="Saurabh Photo 2">
+ </div>
 
-  <div class="frame">
-    <img src="IMG_20261103_114203.jpg" alt="Saurabh Photo 2">
-  </div>
+ <div class="frame">
+  <img src="saurabh2.jpg" alt="Saurabh Photo 3">
+ </div>
 
-  <div class="frame">
-    <img src="saurabh2.jpg" alt="Saurabh Photo 3">
-  </div>
-  <div class="frame">
-    <img src="Picsart_26-10-22_15-40-53-092.jpg" alt="Saurabh Photo 4">
-  </div>
+ <div class="frame">
+  <img src="Picsart_26-10-22_15-40-53-092.jpg" alt="Saurabh Photo 4">
+ </div>
 </div>
 
 <section class="card" id="about">
-  <h2 class="section-title">ABOUT ME</h2>
-  <p>
-    Hello! My name is Saurabh Singh Kushwaha.
-    I am a student, dreamer and lifelong learner.
-    I love learning new skills, technology,
-    creativity and personal development.
-    My goal is to improve myself every day.
-  </p>
+ <h2 class="section-title">ABOUT ME</h2>
+ <p>
+ Hello! My name is Saurabh Singh Kushwaha.
+ I am a student, dreamer and lifelong learner.
+ I love learning new skills, technology,
+ creativity and personal development.
+ My goal is to improve myself every day.
+ </p>
 </section>
 
 <section id="skills">
-  <h2 class="section-title">MY SKILLS</h2>
+ <h2 class="section-title">🚀 MY SKILLS</h2>
+ <p style="text-align:center;color:#ddd">
+ किसी भी Skill पर क्लिक करके सीखना शुरू करें।
+ </p>
 
-  <div class="skills">
-    <span class="skill">💻 HTML</span>
-    <span class="skill">🌐 Web Design</span>
-    <span class="skill">📱 Digital Marketing</span>
-    <span class="skill">🎬 Video Editing</span>
-    <span class="skill">📢 Social Media Marketing</span>
-    <span class="skill">🎨 Graphic Designing</span>
-    <span class="skill">📸 Content Creation</span>
-    <span class="skill">🗣️ Communication</span>
-    <span class="skill">📚 Self Learning</span>
-  </div>
+ <div class="skills">
+  <button class="skill" onclick="openLesson('html')">💻 HTML</button>
+  <button class="skill" onclick="openLesson('web')">🌐 Web Design</button>
+  <button class="skill" onclick="openLesson('digital')">📱 Digital Marketing</button>
+  <button class="skill" onclick="openLesson('video')">🎬 Video Editing</button>
+  <button class="skill" onclick="openLesson('social')">📢 Social Media Marketing</button>
+  <button class="skill" onclick="openLesson('graphic')">🎨 Graphic Designing</button>
+  <button class="skill" onclick="openLesson('content')">📸 Content Creation</button>
+  <button class="skill" onclick="openLesson('communication')">🗣️ Communication</button>
+  <button class="skill" onclick="openLesson('learning')">📚 Self Learning</button>
+ </div>
+</section>
+
+<!-- HTML LESSON -->
+<section class="lesson" id="html">
+ <h2>💻 HTML COURSE</h2>
+ <p>HTML से वेबसाइट बनाना सीखें।</p>
+ <h3>आप क्या सीखेंगे?</h3>
+ <ul>
+  <li>HTML का परिचय</li>
+  <li>Headings और Paragraph</li>
+  <li>Images और Links</li>
+  <li>Forms और Tables</li>
+  <li>अपनी वेबसाइट बनाना</li>
+ </ul>
+ <h3>हिंदी वीडियो</h3>
+ <a href="https://www.youtube.com/results?search_query=HTML+course+for+beginners+Hindi" target="_blank">▶ HTML हिंदी ट्यूटोरियल</a>
+ <h3>प्रैक्टिस</h3>
+ <p>एक HTML पेज बनाइए जिसमें आपका नाम, फोटो और About Me हो।</p>
+ <h3>नोट्स</h3>
+ <p>HTML वेबसाइट का ढाँचा तैयार करने की भाषा है। इसकी शुरुआत &lt;html&gt;, &lt;head&gt; और &lt;body&gt; से होती है।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
+</section>
+
+<!-- WEB DESIGN -->
+<section class="lesson" id="web">
+ <h2>🌐 WEB DESIGN COURSE</h2>
+ <p>सुंदर और मोबाइल फ्रेंडली वेबसाइट बनाना सीखें।</p>
+ <h3>Topics</h3>
+ <ul>
+  <li>CSS और Colors</li>
+  <li>Background और Fonts</li>
+  <li>Flexbox और Layout</li>
+  <li>Responsive Website</li>
+ </ul>
+ <a href="https://www.youtube.com/results?search_query=CSS+web+design+course+Hindi" target="_blank">▶ Web Design हिंदी वीडियो</a>
+ <h3>प्रैक्टिस</h3>
+ <p>अपनी वेबसाइट में एक सुंदर Header और Navigation Bar बनाइए।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
+</section>
+
+<!-- DIGITAL MARKETING -->
+<section class="lesson" id="digital">
+ <h2>📱 DIGITAL MARKETING COURSE</h2>
+ <p>इंटरनेट के माध्यम से किसी Business या Brand का प्रचार करना सीखें।</p>
+ <h3>आप क्या सीखेंगे?</h3>
+ <ul>
+  <li>Digital Marketing Basics</li>
+  <li>SEO और Google Search</li>
+  <li>Instagram Marketing</li>
+  <li>Content Marketing</li>
+  <li>YouTube Marketing</li>
+  <li>Online Branding</li>
+ </ul>
+ <h3>हिंदी वीडियो</h3>
+ <a href="https://www.youtube.com/results?search_query=digital+marketing+course+Hindi+beginners" target="_blank">▶ Digital Marketing हिंदी कोर्स</a>
+ <h3>नोट्स</h3>
+ <p>SEO का अर्थ Search Engine Optimization है। इसका उद्देश्य वेबसाइट को Search Results में बेहतर स्थान दिलाने में मदद करना है।</p>
+ <h3>प्रैक्टिस</h3>
+ <p>एक काल्पनिक Brand चुनें और उसके लिए Instagram पर 3 पोस्ट के आइडिया तैयार करें।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
+</section>
+
+<!-- VIDEO EDITING -->
+<section class="lesson" id="video">
+ <h2>🎬 VIDEO EDITING COURSE</h2>
+ <p>मोबाइल से शानदार Reels और YouTube Shorts बनाना सीखें।</p>
+ <h3>आप क्या सीखेंगे?</h3>
+ <ul>
+  <li>Video Cutting और Trimming</li>
+  <li>Transitions और Effects</li>
+  <li>Text और Captions</li>
+  <li>Background Music</li>
+  <li>Color Correction</li>
+  <li>Reels और Shorts Editing</li>
+ </ul>
+ <h3>हिंदी वीडियो</h3>
+ <a href="https://www.youtube.com/results?search_query=mobile+video+editing+course+Hindi+beginners" target="_blank">▶ Video Editing हिंदी कोर्स</a>
+ <h3>नोट्स</h3>
+ <p>Timeline में वीडियो क्लिप, ऑडियो और टेक्स्ट को सही क्रम में व्यवस्थित किया जाता है।</p>
+ <h3>प्रैक्टिस</h3>
+ <p>15 सेकंड की एक Reel बनाइए। उसमें Text, Music और 2 Transitions लगाइए।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section class="lesson" id="social">
+ <h2>📢 SOCIAL MEDIA MARKETING</h2>
+ <p>Instagram, Facebook और YouTube पर Marketing सीखें।</p>
+ <a href="https://www.youtube.com/results?search_query=social+media+marketing+Hindi" target="_blank">▶ हिंदी वीडियो</a>
+ <h3>प्रैक्टिस</h3>
+ <p>एक सप्ताह का Social Media Content Calendar बनाइए।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
+</section>
+
+<!-- GRAPHIC DESIGN -->
+<section class="lesson" id="graphic">
+ <h2>🎨 GRAPHIC DESIGNING</h2>
+ <p>पोस्टर, बैनर और सोशल मीडिया डिजाइन बनाना सीखें।</p>
+ <a href="https://www.youtube.com/results?search_query=graphic+designing+course+Hindi+beginners" target="_blank">▶ हिंदी वीडियो</a>
+ <h3>प्रैक्टिस</h3>
+ <p>Canva में अपना एक Motivational Poster बनाइए।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
+</section>
+
+<!-- CONTENT CREATION -->
+<section class="lesson" id="content">
+ <h2>📸 CONTENT CREATION</h2>
+ <p>फोटो, वीडियो और उपयोगी पोस्ट बनाना सीखें।</p>
+ <a href="https://www.youtube.com/results?search_query=content+creation+course+Hindi" target="_blank">▶ हिंदी वीडियो</a>
+ <h3>प्रैक्टिस</h3>
+ <p>किसी एक विषय पर 30 सेकंड की जानकारी वाली वीडियो बनाइए।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
+</section>
+
+<!-- COMMUNICATION -->
+<section class="lesson" id="communication">
+ <h2>🗣️ COMMUNICATION SKILLS</h2>
+ <p>आत्मविश्वास के साथ बोलना और अपनी बात समझाना सीखें।</p>
+ <a href="https://www.youtube.com/results?search_query=communication+skills+Hindi+course" target="_blank">▶ हिंदी वीडियो</a>
+ <h3>प्रैक्टिस</h3>
+ <p>हर दिन अपने बारे में 2 मिनट हिंदी या अंग्रेजी में बोलने का अभ्यास करें।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
+</section>
+
+<!-- SELF LEARNING -->
+<section class="lesson" id="learning">
+ <h2>📚 SELF LEARNING</h2>
+ <p>खुद से नई चीजें सीखने की आदत विकसित करें।</p>
+ <a href="https://www.youtube.com/results?search_query=how+to+learn+new+skills+Hindi" target="_blank">▶ हिंदी वीडियो</a>
+ <h3>प्रैक्टिस</h3>
+ <p>हर दिन 30 मिनट एक नई Skill सीखें और जो सीखा उसे लिखें।</p>
+ <button class="close-btn" onclick="closeLessons()">बंद करें</button>
 </section>
 
 <section class="card" id="interests">
-  <h2 class="section-title">MY INTERESTS</h2>
-
-  <div class="skills">
-    <span class="skill">🚀 Instagram Growth</span>
-    <span class="skill">▶️ YouTube Creation</span>
-    <span class="skill">👑 Personal Branding</span>
-    <span class="skill">💡 Online Business</span>
-    <span class="skill">📖 Learning New Skills</span>
-  </div>
+ <h2 class="section-title">MY INTERESTS</h2>
+ <div class="skills">
+  <span class="skill">🚀 Instagram Growth</span>
+  <span class="skill">▶️ YouTube Creation</span>
+  <span class="skill">👑 Personal Branding</span>
+  <span class="skill">💡 Online Business</span>
+  <span class="skill">📖 Learning New Skills</span>
+ </div>
 </section>
 
 <footer>
-  <h3>Made With ❤️ By Saurabh</h3>
-  <p>Dream Big. Stay Focused. Keep Growing.</p>
-  <p>© 2026 All Rights Reserved</p>
+ <h3>Made With ❤️ By Saurabh</h3>
+ <p>Dream Big. Stay Focused. Keep Growing.</p>
+ <p>© 2026 All Rights Reserved</p>
 </footer>
 
+<script>
+function openLesson(id){
+ closeLessons();
+ const lesson=document.getElementById(id);
+ if(lesson){
+  lesson.classList.add("active");
+  lesson.scrollIntoView({behavior:"smooth",block:"start"});
+ }
+}
+
+function closeLessons(){
+ document.querySelectorAll(".lesson").forEach(function(item){
+  item.classList.remove("active");
+ });
+}
+</script>
+
 </body>
-    </html>
+                                                                       </html>
+   
 
 
